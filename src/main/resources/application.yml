@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/game_service
+    username: root
+    password: Minhanh010103

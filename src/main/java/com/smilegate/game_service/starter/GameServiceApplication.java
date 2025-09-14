@@ -1,4 +1,4 @@
-package com.smilegate.game_service;
+package com.smilegate.game_service.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
