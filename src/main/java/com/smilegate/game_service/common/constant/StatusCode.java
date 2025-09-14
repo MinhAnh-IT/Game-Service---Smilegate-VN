@@ -12,7 +12,9 @@ public enum StatusCode {
     SUCCESS(200, "Success"),
     BAD_REQUEST(400, "Bad Request"),
     NOT_FOUND(404, "Resource not found: %s"),
-    INTERNAL_ERROR(500, "Internal Server Error");
+    INTERNAL_ERROR(500, "Internal Server Error"),
+    FILE_STORAGE_ERROR(600, "File storage error: %s"),
+    FILE_NOT_FOUND_ERROR(601, "File not found: %s");
 
     int code;
     String message;

@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Table(name = "categories")
 @Getter
 @Setter
-@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Category {
 
