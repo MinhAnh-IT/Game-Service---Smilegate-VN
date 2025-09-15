@@ -1,4 +1,4 @@
-package com.smilegate.game_service.infrastructure.storage.Impl;
+package com.smilegate.game_service.infrastructure.storage.impl;
 
 import com.smilegate.game_service.exception.FileStorageException;
 import com.smilegate.game_service.infrastructure.storage.StorageService;

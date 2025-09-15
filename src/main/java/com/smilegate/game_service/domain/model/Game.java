@@ -13,6 +13,8 @@ import java.util.List;
 @Table(name = "games")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Game {
@@ -38,4 +40,5 @@ public class Game {
 
     @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true)
     List<GameName> names;
+
 }
