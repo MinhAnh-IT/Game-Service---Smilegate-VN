@@ -21,11 +21,10 @@ public class ApiResponse<T> {
         return new ApiResponse<>(StatusCode.SUCCESS.getCode(), StatusCode.SUCCESS.getMessage(), data);
     }
 
-    public static <T> ApiResponse<T> error(StatusCode statusCode) {
-        return new ApiResponse<>(statusCode.getCode(), statusCode.formatMessage(""), null);
-    }
-
     public static <T> ApiResponse<T> error(StatusCode statusCode, String customMessage) {
         return new ApiResponse<>(statusCode.getCode(), customMessage, null);
+    }
+    public static <T> ApiResponse<T> error(StatusCode statusCode, T data) {
+        return new ApiResponse<>(statusCode.getCode(), statusCode.getMessage(), data);
     }
 }

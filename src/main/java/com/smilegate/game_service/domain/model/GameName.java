@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 @Table(name = "game_names")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class GameName {
@@ -24,14 +26,15 @@ public class GameName {
     @JoinColumn(name = "game_id", nullable = false)
     Game game;
 
-    @Column(length = 2, nullable = false)
-    String language; // EN, KO, JA
+    @ManyToOne
+    @JoinColumn(name = "language", referencedColumnName = "code", nullable = false)
+    private Language language;
 
     @Column(nullable = false, length = 255)
     String value;
 
-    @Column(name = "is_default", nullable = false)
-    boolean isDefault;
+    @Column(name = "default_name", nullable = false)
+    boolean defaultName;
 
     @Column(name = "created_at", updatable = false, insertable = false)
     @CreationTimestamp
