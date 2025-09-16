@@ -11,7 +11,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class GameResponse {
     String gameId;
-    String category;
+    CategoryResponse category;
     String image;
     List<GameNameResponse> gameNames;
 }

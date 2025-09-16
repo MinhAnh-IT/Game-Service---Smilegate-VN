@@ -14,7 +14,7 @@ import java.util.List;
 public interface GameMapper {
 
     @Mapping(source = "id", target = "gameId")
-    @Mapping(source = "category.code", target = "category")
+    @Mapping(source = "category", target = "category")
     @Mapping(source = "names", target = "gameNames")
     GameResponse toResponse(Game game);
 
